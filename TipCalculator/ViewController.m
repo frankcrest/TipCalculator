@@ -13,6 +13,7 @@
 @property (nonatomic, assign) float billAmount;
 @property (weak, nonatomic) IBOutlet UITextField *myTextField;
 @property (weak, nonatomic) IBOutlet UILabel *tipLabel;
+@property (weak, nonatomic) IBOutlet UITextField *tipPercentageTextField;
 
 @end
 
@@ -28,9 +29,11 @@
     self.tipLabel.text = tipAmount;
 }
 
--(float)calculateTip:(NSInteger)total{
-    return total * 0.15;
+-(float)calculateTip:(float)total{
+    float tipPercentage = [self.tipPercentageTextField.text floatValue] ? [self.tipPercentageTextField.text floatValue] / 100 : 0.5;
+    return total * tipPercentage;
 }
 
 
 @end
+

@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Z8-EF-ATr">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter bill amount" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Z8-EF-ATr">
                                 <rect key="frame" x="8" y="318.5" width="359" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -37,6 +37,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter tip percentage" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6F9-UQ-T5u">
+                                <rect key="frame" x="8" y="459.5" width="359" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -46,9 +52,12 @@
                             <constraint firstItem="4j1-tt-sUZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7qr-0C-dxc"/>
                             <constraint firstItem="4j1-tt-sUZ" firstAttribute="top" secondItem="1Z8-EF-ATr" secondAttribute="bottom" constant="20" id="Bm9-S7-I9M"/>
                             <constraint firstItem="1Z8-EF-ATr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IaU-V0-cZN"/>
+                            <constraint firstItem="6F9-UQ-T5u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="PsD-lY-plR"/>
                             <constraint firstItem="1Z8-EF-ATr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Ye8-Sm-2AU"/>
+                            <constraint firstItem="6F9-UQ-T5u" firstAttribute="top" secondItem="5Po-qJ-Nuc" secondAttribute="bottom" constant="20" id="oou-7v-l99"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Z8-EF-ATr" secondAttribute="trailing" constant="8" id="qfv-tV-iIp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Po-qJ-Nuc" secondAttribute="trailing" constant="8" id="vJY-E1-CTQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6F9-UQ-T5u" secondAttribute="trailing" constant="8" id="xfc-Xo-hrJ"/>
                             <constraint firstItem="5Po-qJ-Nuc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y1f-QR-zwR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -56,6 +65,7 @@
                     <connections>
                         <outlet property="myTextField" destination="1Z8-EF-ATr" id="r37-Fy-Coj"/>
                         <outlet property="tipLabel" destination="5Po-qJ-Nuc" id="sbp-Zc-l7q"/>
+                        <outlet property="tipPercentageTextField" destination="6F9-UQ-T5u" id="dT9-Fq-Oyr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
