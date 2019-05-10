@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property (nonatomic, assign) NSInteger billAmount;
+
 @end
 
 @implementation ViewController
