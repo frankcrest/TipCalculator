@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UISlider *tipSlider;
 @property (nonatomic, assign) float tipPercentage;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewYPositionConstraint;
 
 @end
 
@@ -27,8 +28,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self.notificationCenter addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
-    [self.notificationCenter addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
-    
+    [self.notificationCenter addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(keyboarControl:)];
     [self.view addGestureRecognizer:tapGesture];
 }
@@ -58,12 +59,11 @@
 }
 
 - (void)keyboardWillShow:(NSNotification *)notification{
-    self.containerView.center = CGPointMake(self.view.center.x, self.view.center.y - 100);
+    self.viewYPositionConstraint.constant = -100;
 }
 
-- (void)keyboardDidHide:(NSNotification *)notification{
-    NSLog(@"hide");
-    //self.containerView.center = CGPointMake(self.view.center.x, self.view.center.y);
+- (void)keyboardWillHide:(NSNotification *)notification{
+    self.viewYPositionConstraint.constant = 0;
 }
 
 - (IBAction)adjustTipPercentage:(UISlider *)sender {

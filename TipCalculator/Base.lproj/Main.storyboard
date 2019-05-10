@@ -94,6 +94,7 @@
                         <outlet property="tipLabel" destination="5Po-qJ-Nuc" id="sbp-Zc-l7q"/>
                         <outlet property="tipPercentageTextField" destination="6F9-UQ-T5u" id="dT9-Fq-Oyr"/>
                         <outlet property="tipSlider" destination="8en-Tk-sQ5" id="BlR-az-Uc2"/>
+                        <outlet property="viewYPositionConstraint" destination="3F3-fe-W8U" id="k2m-OB-qPl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
