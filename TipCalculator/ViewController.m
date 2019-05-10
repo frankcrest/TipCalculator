@@ -10,7 +10,8 @@
 
 @interface ViewController ()
 
-@property (nonatomic, assign) NSInteger billAmount;
+@property (nonatomic, assign) float billAmount;
+@property (weak, nonatomic) IBOutlet UITextField *myTextField;
 
 @end
 
@@ -19,6 +20,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+- (IBAction)calculateTipButtonPressed:(id)sender {
+    float totalAmount = [self.myTextField.text floatValue];
+    [self calculateTip:totalAmount];
+}
+
+-(float)calculateTip:(NSInteger)total{
+    return total * 0.15;
 }
 
 
