@@ -31,20 +31,31 @@
                                     <action selector="calculateTipButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AK5-Tu-tTO"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Po-qJ-Nuc">
+                                <rect key="frame" x="8" y="418.5" width="359" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="5Po-qJ-Nuc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="3rb-go-PD1"/>
                             <constraint firstItem="1Z8-EF-ATr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4a7-hT-RDK"/>
+                            <constraint firstItem="5Po-qJ-Nuc" firstAttribute="top" secondItem="4j1-tt-sUZ" secondAttribute="bottom" constant="20" id="7Nb-90-Ohb"/>
                             <constraint firstItem="4j1-tt-sUZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7qr-0C-dxc"/>
                             <constraint firstItem="4j1-tt-sUZ" firstAttribute="top" secondItem="1Z8-EF-ATr" secondAttribute="bottom" constant="20" id="Bm9-S7-I9M"/>
                             <constraint firstItem="1Z8-EF-ATr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IaU-V0-cZN"/>
                             <constraint firstItem="1Z8-EF-ATr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Ye8-Sm-2AU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Z8-EF-ATr" secondAttribute="trailing" constant="8" id="qfv-tV-iIp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Po-qJ-Nuc" secondAttribute="trailing" constant="8" id="vJY-E1-CTQ"/>
+                            <constraint firstItem="5Po-qJ-Nuc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y1f-QR-zwR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="myTextField" destination="1Z8-EF-ATr" id="r37-Fy-Coj"/>
+                        <outlet property="tipLabel" destination="5Po-qJ-Nuc" id="sbp-Zc-l7q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

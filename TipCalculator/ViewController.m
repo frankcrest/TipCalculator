@@ -12,6 +12,7 @@
 
 @property (nonatomic, assign) float billAmount;
 @property (weak, nonatomic) IBOutlet UITextField *myTextField;
+@property (weak, nonatomic) IBOutlet UILabel *tipLabel;
 
 @end
 
@@ -23,7 +24,8 @@
 }
 - (IBAction)calculateTipButtonPressed:(id)sender {
     float totalAmount = [self.myTextField.text floatValue];
-    [self calculateTip:totalAmount];
+    NSString* tipAmount = [NSString stringWithFormat:@"$%f",[self calculateTip:totalAmount]];
+    self.tipLabel.text = tipAmount;
 }
 
 -(float)calculateTip:(NSInteger)total{
